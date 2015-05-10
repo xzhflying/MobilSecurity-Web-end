@@ -1,0 +1,8 @@
+<h1>绑定PC</h1>
+<p>请下载并安装数字证书</p>
+<%= form_for :certificate, url: user_certificates_create_path do |f| %>
+    <p>
+      <%= f.submit "下载数字证书"%>
+    </p>
+<% end %>
+<button class="btn-primary" onclick="">我已安装</button>

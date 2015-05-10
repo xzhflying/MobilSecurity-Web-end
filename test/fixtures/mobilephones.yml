@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  mobileinfo: MyString
+  devicename: MyString
+  onceID: MyString
+
+two:
+  mobileinfo: MyString
+  devicename: MyString
+  onceID: MyString

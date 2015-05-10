@@ -1,0 +1,9 @@
+<html>
+<head>
+</head>
+<body>
+  <%unless current_user.nil? or not first_use?%>
+    <%= link_to('首次绑定系统', user_certificates_new_path)%>
+  <%end%>
+</body>
+</html>
