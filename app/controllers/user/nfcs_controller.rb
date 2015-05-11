@@ -3,7 +3,7 @@ class User::NfcsController < ApplicationController
   end
 
   def index
-    @nfcs = User::Nfc.my_nfcs(current_user)
+    @nfcs = current_user.nfcs
   end
 
   def destroy

@@ -3,7 +3,7 @@ class User::MobilephonesController < ApplicationController
   end
 
   def index
-    @mobiles = User::Mobilephone.my_mobiles(current_user)
+    @mobiles = current_user.mobilephones
   end
 
   def destroy

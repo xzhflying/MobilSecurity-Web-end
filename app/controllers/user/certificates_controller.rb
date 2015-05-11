@@ -3,7 +3,7 @@ class User::CertificatesController < ApplicationController
   end
 
   def index
-    @certificates = User::Certificate.my_certificates(current_user)
+    @certificates = current_user.certificates
   end
 
   def destroy
