@@ -12,4 +12,10 @@ module ApplicationHelper
       false
     end
   end
+
+  def get_first_use_url
+    unless current_user.nil? or not first_use?
+      user_certificates_new_path
+    end
+  end
 end
