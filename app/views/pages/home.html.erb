@@ -12,55 +12,7 @@
 	</head>
 	<body>
 
-<!-- Carousel
-================================================== -->
-<div id="myCarousel" class="carousel slide">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-    <li data-target="#myCarousel" data-slide-to="1"></li>
-    <li data-target="#myCarousel" data-slide-to="2"></li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="item active">
-      <img src="/assets/example/bg_suburb.jpg" style="width:100%" class="img-responsive">
-      <div class="container">
-        <div class="carousel-caption">
-          <h1>对，你没看错，竟然叫三角验证这么土的名字</h1>
-          <p></p>
-          <p><a class="btn btn-lg btn-primary" style="width:150px" href=<%=get_first_use_url%>>开始体验</a>
-        </p>
-        </div>
-      </div>
-    </div>
-    <div class="item">
-      <img src="http://lorempixel.com/2000/600/abstract/1" class="img-responsive">
-      <div class="container">
-        <div class="carousel-caption">
-          <h1>做手机端的是狗</h1>
-          <p>这么明显你看不出来吗。。。</p>
-        </div>
-      </div>
-    </div>
-    <div class="item">
-      <img src="/assets/example/bg_suburb.jpg" class="img-responsive">
-      <div class="container">
-        <div class="carousel-caption">
-          <h1>我看出来了！</h1>
-          <p>为何你这么牛逼</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Controls -->
-  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-    <span class="icon-prev"></span>
-  </a>
-  <a class="right carousel-control" href="#myCarousel" data-slide="next">
-    <span class="icon-next"></span>
-  </a>  
-</div>
-<!-- /.carousel -->
+<%=render 'layouts/header'%>
 
 
 <!-- Marketing messaging and featurettes
@@ -74,20 +26,20 @@
     <div class="col-md-4 text-center">
       <img class="img"  style="height:200px;width:260px" src="/images/home/mac.jpg">
       <h2>个人电脑</h2>
-      <p>此处应有说明。。。</p>
-      <p><a class="btn btn-default" href="#">View details »</a></p>
+      <p>下载数字证书，绑定个人电脑</p>
+      <p><a class="btn btn-default" href="#">绑定PC »</a></p>
     </div>
     <div class="col-md-4 text-center">
       <img class="img"  style="height:200px;width:190px" src="/images/home/iphone.png">
       <h2>移动设备</h2>
-      <p>我猜这也有</p>
-      <p><a class="btn btn-default" href="#">View details »</a></p>
+      <p>绑定移动终端，验证用户身份</p>
+      <p><a class="btn btn-default" data-target="#mobilephone" data-toggle="modal">绑定手机 »</a></p>
     </div>
     <div class="col-md-4 text-center">
       <img class="img"  style="height:200px;width:200px" src="/images/home/nfc.png">
       <h2>NFC智能手环</h2>
-      <p>看毅神的了。。。</p>
-      <p><a class="btn btn-default" href="#">View details »</a></p>
+      <p>绑定NFC设备，辅助移动终端</p>
+      <p><a class="btn btn-default" href="#">绑定NFC »</a></p>
     </div>
   </div><!-- /.row -->
 
@@ -97,40 +49,33 @@
   <hr class="featurette-divider">
 
   <div class="featurette">
-    <img class="featurette-image img-circle pull-right" src="http://placehold.it/512">
-    <h2 class="featurette-heading">Responsive Design. <span class="text-muted">It'll blow your mind.</span></h2>
-    <p class="lead">In simple terms, a responsive web design figures out what resolution of device it's being served on. Flexible grids then size correctly to fit the screen.</p>
+    <img class="featurette-image img-circle pull-right" src="">
+    <h2 class="featurette-heading">个人电脑。 <span class="text-muted" style="font-size: 30px">利用数字证书认证</span></h2>
+    <p class="lead">利用CA数字证书，确保对个人电脑的唯一性认证。只有用户绑定的电脑才具有合法的用户权限。能有有效确保信息的安全，使得个人电脑成为用户信息安全的重要屏障</p>
   </div>
 
   <hr class="featurette-divider">
 
   <div class="featurette">
-    <img class="featurette-image img-circle pull-left" src="http://placehold.it/512">
-    <h2 class="featurette-heading">Smaller Footprint. <span class="text-muted">Lightweight.</span></h2>
-    <p class="lead">The new Bootstrap 3 promises to be a smaller build. The separate Bootstrap base and responsive.css files have now been merged into one. There is no more fixed grid, only fluid.</p>
+    <img class="featurette-image img-circle pull-left" src="">
+    <h2 class="featurette-heading">移动终端。 <span class="text-muted" style="font-size: 30px">利用软硬件信息认证</span></h2>
+    <p class="lead">利用移动终端软硬件信息，确保只有用户绑定的移动终端才具有合法的用户权限。利用移动终端便携的特点，方便用户使用多种功能，是本系统保护的重点对象。配合其他两角，形成制约，限制并防止其丢失造成的后果</p>
   </div>
 
   <hr class="featurette-divider">
 
   <div class="featurette">
-    <img class="featurette-image img-circle pull-right" src="http://placehold.it/512">
-    <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Flatness.</span></h2>
-    <p class="lead">A big design trend for 2013 is "flat" design. Gone are the days of excessive gradients and shadows. Designers are producing cleaner flat designs, and Bootstrap 3 takes advantage of this minimalist trend.</p>
+    <img class="featurette-image img-circle pull-right" src="">
+    <h2 class="featurette-heading">NFC智能手环。 <span class="text-muted" style="font-size: 30px">可穿戴设备形成第二道屏障</span></h2>
+    <p class="lead">可穿戴设备作为另一道重要屏障，在移动终端功能使用的同时提供限制。有效防止移动终端丢失或被盗用的情况发生。同时也不失使用的便捷性</p>
   </div>
-
-  <hr class="featurette-divider">
 
   <!-- /END THE FEATURETTES -->
-
-
-  <!-- FOOTER -->
-  <footer>
-    <p class="pull-right"><a href="#">返回顶层</a></p>
-    <p>呵呵呵呵呵呵· <a href="＃">呵呵</a></p>
-  </footer>
-
+  <%=render 'layouts/footer'%>
 </div><!-- /.container -->
+
+<%=render 'layouts/modals'%>
 	<!-- script references -->
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+
 	</body>
 </html>

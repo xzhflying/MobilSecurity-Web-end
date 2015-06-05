@@ -1,6 +1,133 @@
-<h1>我的信息</h1>
-<h3>个人信息什么的再说吧</h3>
-<h3>我的设备</h3>
-<li><%= link_to("我的手机", user_mobilephones_index_path)%></li>
-<li><%= link_to("我的PC", user_certificates_index_path)%></li>
-<li><%= link_to("我的NFC", user_nfcs_index_path)%></li>
+<%= render 'layouts/header'%>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8" id="leftInfo">
+      <div id="myNav">
+        <ul class="nav nav-pills nav-justified" role="tablist" id="myTab">
+          <li class="active"><a href="#pc" role="tab" data-toggle="tab">PC</a></li>
+          <li><a href="#mobile" role="tab" data-toggle="tab">Mobile</a></li>
+          <li><a href="#nfc" role="tab" data-toggle="tab">NFC</a></li>
+        </ul>
+      </div>
+
+      <div class="tab-content">
+
+        <div class="tab-pane active" id="pc">
+          <div class="pcGroup">
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapsePC1" aria-expanded="false" aria-controls="collapseExample">
+              绑定的PC 1
+            </button>
+            <div class="collapse" id="collapsePC1">
+              <div class="well">
+                <ul class="list-group">
+                  <li class="list-group-item">PC名称
+                    <p class="detail">xxxxxxxxxx</p></li>
+                  <li class="list-group-item">制造商
+                    <p class="detail">xxxxxxxxxx</p></li>
+                  <li class="list-group-item">型号
+                    <p class="detail">xxxxxxxxxx</p></li>
+                  <li class="list-group-item">绑定日期
+                    <p class="detail">xxxxxxxxxx</p></li>
+                </ul>
+                <button class="btn btn-lg btn-danger" style="height:70%;width:100%">解绑该设备</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="pcGroup">
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapsePC2" aria-expanded="false" aria-controls="collapseExample">
+              绑定的PC 2
+            </button>
+            <div class="collapse" id="collapsePC2">
+              <div class="well">
+                <ul class="list-group">
+                  <li class="list-group-item">PC名称
+                    <p class="detail">xxxxxxxxxx</p></li>
+                  <li class="list-group-item">制造商
+                    <p class="detail">xxxxxxxxxx</p></li>
+                  <li class="list-group-item">型号
+                    <p class="detail">xxxxxxxxxx</p></li>
+                  <li class="list-group-item">绑定日期
+                    <p class="detail">xxxxxxxxxx</p></li>
+                </ul>
+                <button class="btn btn-lg btn-danger" style="height:70%;width:100%">解绑该设备</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-pane fade" id="mobile">
+          <div class="pcGroup">
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseMobile" aria-expanded="false" aria-controls="collapseExample">
+              绑定的手机 1
+            </button>
+            <div class="collapse" id="collapseMobile">
+              <div class="well">
+                <ul class="list-group">
+                  <li class="list-group-item">PC名称
+                    <p class="detail">xxxxxxxxxx</p></li>
+                  <li class="list-group-item">制造商
+                    <p class="detail">xxxxxxxxxx</p></li>
+                  <li class="list-group-item">型号
+                    <p class="detail">xxxxxxxxxx</p></li>
+                  <li class="list-group-item">绑定日期
+                    <p class="detail">xxxxxxxxxx</p></li>
+                </ul>
+                <button class="btn btn-lg btn-danger" style="height:70%;width:100%">解绑该设备</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-pane fade" id="nfc">
+          <div class="pcGroup">
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseNFC" aria-expanded="false" aria-controls="collapseExample">
+              绑定的NFC 1
+            </button>
+            <div class="collapse" id="collapseNFC">
+              <div class="well">
+                <ul class="list-group">
+                  <li class="list-group-item">PC名称
+                    <p class="detail">xxxxxxxxxx</p></li>
+                  <li class="list-group-item">制造商
+                    <p class="detail">xxxxxxxxxx</p></li>
+                  <li class="list-group-item">型号
+                    <p class="detail">xxxxxxxxxx</p></li>
+                  <li class="list-group-item">绑定日期
+                    <p class="detail">xxxxxxxxxx</p></li>
+                </ul>
+                <button class="btn btn-lg btn-danger" style="height:70%;width:100%">解绑该设备</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="col-md-4" id="rightInfo">
+      <div class="sidebar">
+        <div class="iconName">
+          <h4 id="name">Sea Create</h4>
+          <img id="icon" src="/images/user_show/header.jpeg">
+        </div>
+        <div class="information">
+          <div class="info-list">
+            <img class="littleIcon" src="/images/user_show/icon1.png">
+            <p id="school">所属机构：四川大学</p>
+          </div>
+          <div class="info-list">
+            <img class="littleIcon" src="/images/user_show/icon2.png">
+            <p id="address">所在地点：四川成都</p>
+          </div>
+          <div class="info-list">
+            <img class="littleIcon" src="/images/user_show/icon3.png">
+            <p>注册时间：<span id="bindDate">2015-4-1 </span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <%= render 'layouts/footer'%>
+</div>
