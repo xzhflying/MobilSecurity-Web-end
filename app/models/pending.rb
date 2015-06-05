@@ -3,7 +3,7 @@ class Pending < ActiveRecord::Base
 
   def self.generate_pending_action(user, action, obj)
     pending = Pending.new(user_id: user.id, enable: true)
-    message = user.email + "*" + action + "*" + obj
+    message = "1" + "*" + action + "*" + obj
     qr_code_img = self.generate_qr(message)
     pending.update_attribute :qr, qr_code_img.to_string
     pending
