@@ -1,0 +1,17 @@
+<div id="mobilephone" class="modal fade" role="dialog" xmlns="http://www.w3.org/1999/html">
+  <div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+        <a class="close" data-dismiss="modal">×</a>
+        <h3  style="text-align: center">请用移动端软件扫描二维码</h3>
+    </div>
+    <div class="modal-body" style="text-align: center">
+      <%@action = Pending.generate_pending_action(current_user, "bind", "mobilephone")%>
+      <%= image_tag @action.qr.url%>
+    </div>
+    <div class="modal-footer" style="text-align: center">
+      <button class="btn-lg btn-warning" data-dismiss="modal">我已完成绑定</button>
+    </div>
+  </div>
+  </div>
+</div>
