@@ -54,6 +54,7 @@ Rails.application.routes.draw do
 
   namespace :user do
   get 'certificates/new'
+  get 'certificates/download_ca'
   end
 
   namespace :user do

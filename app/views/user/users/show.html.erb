@@ -21,36 +21,15 @@
               <div class="well">
                 <ul class="list-group">
                   <li class="list-group-item">PC名称
-                    <p class="detail">xxxxxxxxxx</p></li>
+                    <p class="detail">My Mac</p></li>
                   <li class="list-group-item">制造商
-                    <p class="detail">xxxxxxxxxx</p></li>
+                    <p class="detail">Apple</p></li>
                   <li class="list-group-item">型号
-                    <p class="detail">xxxxxxxxxx</p></li>
+                    <p class="detail">Macbook Pro C02N93</p></li>
                   <li class="list-group-item">绑定日期
-                    <p class="detail">xxxxxxxxxx</p></li>
+                    <p class="detail">2015-5-20</p></li>
                 </ul>
-                <button class="btn btn-lg btn-danger" style="height:70%;width:100%">解绑该设备</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="pcGroup">
-            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapsePC2" aria-expanded="false" aria-controls="collapseExample">
-              绑定的PC 2
-            </button>
-            <div class="collapse" id="collapsePC2">
-              <div class="well">
-                <ul class="list-group">
-                  <li class="list-group-item">PC名称
-                    <p class="detail">xxxxxxxxxx</p></li>
-                  <li class="list-group-item">制造商
-                    <p class="detail">xxxxxxxxxx</p></li>
-                  <li class="list-group-item">型号
-                    <p class="detail">xxxxxxxxxx</p></li>
-                  <li class="list-group-item">绑定日期
-                    <p class="detail">xxxxxxxxxx</p></li>
-                </ul>
-                <button class="btn btn-lg btn-danger" style="height:70%;width:100%">解绑该设备</button>
+                <button class="btn btn-lg btn-danger" data-target="#unbind" data-toggle="modal" style="height:70%;width:100%">解绑该设备</button>
               </div>
             </div>
           </div>
@@ -64,16 +43,16 @@
             <div class="collapse" id="collapseMobile">
               <div class="well">
                 <ul class="list-group">
-                  <li class="list-group-item">PC名称
-                    <p class="detail">xxxxxxxxxx</p></li>
+                  <li class="list-group-item">手机名称
+                    <p class="detail">我的手机</p></li>
                   <li class="list-group-item">制造商
-                    <p class="detail">xxxxxxxxxx</p></li>
+                    <p class="detail">HTC</p></li>
                   <li class="list-group-item">型号
-                    <p class="detail">xxxxxxxxxx</p></li>
+                    <p class="detail">HTC 606w</p></li>
                   <li class="list-group-item">绑定日期
-                    <p class="detail">xxxxxxxxxx</p></li>
+                    <p class="detail">2015-5-20</p></li>
                 </ul>
-                <button class="btn btn-lg btn-danger" style="height:70%;width:100%">解绑该设备</button>
+                <button class="btn btn-lg btn-danger" data-target="#unbind" data-toggle="modal" style="height:70%;width:100%">解绑该设备</button>
               </div>
             </div>
           </div>
@@ -87,16 +66,16 @@
             <div class="collapse" id="collapseNFC">
               <div class="well">
                 <ul class="list-group">
-                  <li class="list-group-item">PC名称
-                    <p class="detail">xxxxxxxxxx</p></li>
+                  <li class="list-group-item">NFC名称
+                    <p class="detail">我的NFC</p></li>
                   <li class="list-group-item">制造商
-                    <p class="detail">xxxxxxxxxx</p></li>
+                    <p class="detail">海创</p></li>
                   <li class="list-group-item">型号
-                    <p class="detail">xxxxxxxxxx</p></li>
+                    <p class="detail">f19179a06954edd0</p></li>
                   <li class="list-group-item">绑定日期
-                    <p class="detail">xxxxxxxxxx</p></li>
+                    <p class="detail">2015-5-20</p></li>
                 </ul>
-                <button class="btn btn-lg btn-danger" style="height:70%;width:100%">解绑该设备</button>
+                <button class="btn btn-lg btn-danger" data-target="#unbind" data-toggle="modal" style="height:70%;width:100%">解绑该设备</button>
               </div>
             </div>
           </div>
@@ -129,5 +108,6 @@
     </div>
 
   </div>
+  <%= render 'layouts/modals'%>
   <%= render 'layouts/footer'%>
 </div>

@@ -24,4 +24,11 @@ class User::CertificatesController < ApplicationController
       # 绑定失败
     end
   end
+
+  def download_ca
+    send_file(
+        "#{Rails.root}/public/ca/User_CA.cer",
+        filename: "User_CA.cer",
+    )
+  end
 end

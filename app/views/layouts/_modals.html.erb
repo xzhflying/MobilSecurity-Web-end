@@ -1,17 +1,72 @@
-<div id="mobilephone" class="modal fade" role="dialog" xmlns="http://www.w3.org/1999/html">
-  <div class="modal-dialog">
-  <div class="modal-content">
-    <div class="modal-header">
-        <a class="close" data-dismiss="modal">×</a>
-        <h3  style="text-align: center">请用移动端软件扫描二维码</h3>
+<%if current_user%>
+    <div id="nfc" class="modal fade" role="dialog" xmlns="http://www.w3.org/1999/html">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <a class="close" data-dismiss="modal">×</a>
+            <h3  style="text-align: center">请用已绑定的手机扫描二维码</h3>
+          </div>
+          <div class="modal-body" style="text-align: center">
+            <%@action = Pending.generate_pending_action(current_user, msg: "1>bind>nfc>1")%>
+            <%= image_tag @action.qr.url%>
+          </div>
+          <div class="modal-footer" style="text-align: center">
+            <button class="btn-lg btn-success" data-dismiss="modal">我已完成绑定</button>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="modal-body" style="text-align: center">
-      <%@action = Pending.generate_pending_action(current_user, "bind", "mobilephone")%>
-      <%= image_tag @action.qr.url%>
+
+    <div id="firstbind" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <a class="close" data-dismiss="modal">×</a>
+            <h3  style="text-align: center">请先下载安装数字证书<br>再用移动端软件扫描下方二维码</h3>
+          </div>
+          <div class="modal-body" style="text-align: center">
+            <%@action = Pending.generate_pending_action(current_user, msg: "1>register>asdfghjkl")%>
+            <%= image_tag @action.qr.url%>
+          </div>
+          <div class="modal-footer" style="text-align: center">
+            <p><a class="btn btn-lg btn-warning" href=<%= user_certificates_download_ca_path %>>下载数字证书</a></p>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="modal-footer" style="text-align: center">
-      <button class="btn-lg btn-warning" data-dismiss="modal">我已完成绑定</button>
+
+    <div id="unbind" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <a class="close" data-dismiss="modal">×</a>
+            <h3  style="text-align: center">请用已绑定的手机扫描下方二维码</h3>
+          </div>
+          <div class="modal-body" style="text-align: center">
+            <%@action = Pending.generate_pending_action(current_user, msg: "1>unbind>nfc>1")%>
+            <%= image_tag @action.qr.url%>
+          </div>
+          <div class="modal-footer" style="text-align: center">
+            <button class="btn-lg btn-success" data-dismiss="modal">我已完成解绑</button>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-  </div>
-</div>
+
+    <div id="warning" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <a class="close" data-dismiss="modal">×</a>
+            <h1  style="text-align: center">绑定失败</h1>
+          </div>
+          <div class="modal-body" style="text-align: center">
+            <h2>请用已绑定的PC设备进行操作！</h2>
+          </div>
+          <div class="modal-footer" style="text-align: center">
+            <button class="btn-lg btn-danger" data-dismiss="modal">操作失败</button>
+          </div>
+        </div>
+      </div>
+    </div>
+<%end%>
